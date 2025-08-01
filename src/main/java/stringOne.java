@@ -6,7 +6,8 @@ public class stringOne {
                 text = "text";
         System.out.println(word);
         System.out.println(phrase);
-        System.out.println(line);
+        System.out.println(text);
         System.out.println(text);
 
-}}
+
+    }}
