@@ -2,6 +2,7 @@ package Calculator;
 
 import java.util.Scanner;
 
+
 public class Calculator {
     public void runCalculator() {
 
@@ -13,24 +14,26 @@ public class Calculator {
         System.out.println("введи второе число");
         float b = sc.nextFloat();
 
-
+        ICalculator obj;
+        //float result = 0;
 
         if (op == '+'){
-            float result = a+b;
-            System.out.println( + a + " и " + b + " = " + result);
+            obj = new Plus();
         } else if (op == '-'){
-            float result = a-b;
-            System.out.println( + a + " и " + b + " = " + result);
+            obj = new Minus();
         } else if (op == '*'){
-            float result = a*b;
-            System.out.println( + a + " и " + b + " = " + result);
+            obj = new Multiply();
         } else if (op == '/'){
-            float result = a/b;
-            System.out.println( + a + " и " + b + " = " + result);
+            obj = new Divide();
+
         } else {
             System.out.println("Указанная операция не поддерживается, введи опрацию ( +, -, *, /)");
+            return;
         }
 
+        double result = obj.calculate(a,b);
+        System.out.println( + a + " и " + b + " = " + result);
 
+        sc.close();
     }
 }
