@@ -32,7 +32,7 @@ public class Calculator {
         }
 
         double result = obj.calculate(a,b);
-        System.out.println( + a + " и " + b + " = " + result);
+        System.out.println( a + " и " + b + " = " + result);
 
         sc.close();
     }
