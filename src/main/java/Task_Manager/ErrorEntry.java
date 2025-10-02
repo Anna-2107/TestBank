@@ -34,7 +34,7 @@ public String getId() {return  id;}
 public LocalDate getDate() {return date;}
 public String getBranch() {return branch;}
 public String getErrorType() {return errorType;}
-    public String getname() {return name;}
+    public String getName() {return name;}
 public String getPlatform() {return platform;}
 public String getTaskId() {return taskId;}
     public Map<String, String> getExtraFields() {
