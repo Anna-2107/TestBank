@@ -1,4 +1,4 @@
-// КЛАССЫ
+package All;// КЛАССЫ
 
 public class cat {                     // класс
 

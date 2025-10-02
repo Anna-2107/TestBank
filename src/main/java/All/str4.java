@@ -1,3 +1,5 @@
+package All;
+
 public class str4 {
     public static void main(String[] args) {
         int x = 15;

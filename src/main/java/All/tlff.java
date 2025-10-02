@@ -1,3 +1,5 @@
+package All;
+
 public class tlff {
     public static void main(String[] args) {
         int toothCounter = 32;

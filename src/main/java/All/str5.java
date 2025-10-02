@@ -1,3 +1,5 @@
+package All;
+
 public class str5 {
     public static void main(String[] args) {
         String bigAmount = "100";

@@ -1,3 +1,5 @@
+package All;
+
 public class tlft
 {
     public static void main(String[] args) {

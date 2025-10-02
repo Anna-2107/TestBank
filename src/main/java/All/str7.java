@@ -1,3 +1,5 @@
+package All;
+
 public class str7 {
     public static void main(String[] args) {
         String one = "hello gays";

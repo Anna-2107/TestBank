@@ -1,4 +1,4 @@
-
+package All;
 
 public class сalculator {
 

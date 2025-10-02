@@ -1,3 +1,5 @@
+package All;
+
 public class stringOne {
     public static void main(String[] args) {
         String word = "word",

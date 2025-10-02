@@ -1,0 +1,51 @@
+import java.time.LocalDateTime;
+
+public class ErrorLog {
+
+    // Приватные поля класса
+    private int id;
+    private LocalDateTime date;
+    private String branch;
+    private int siteNumber;
+    private String taskId;
+    private String errorType;
+    private String errorMessage;
+
+    // Конструктор для создания нового объекта ErrorLog
+    public ErrorLog(int id, LocalDateTime date, String branch, int siteNumber, String taskId, String errorType, String errorMessage) {
+        this.id = id;
+        this.date = date;
+        this.branch = branch;
+        this.siteNumber = siteNumber;
+        this.taskId = taskId;
+        this.errorType = errorType;
+        this.errorMessage = errorMessage;
+    }
+
+    // Пустой конструктор, который нужен для библиотеки Jackson
+    public ErrorLog() {}
+
+    // Геттеры (методы для получения значений полей)
+    public int getId() { return id; }
+    public LocalDateTime getDate() { return date; }
+    public String getBranch() { return branch; }
+    public int getSiteNumber() { return siteNumber; }
+    public String getTaskId() { return taskId; }
+    public String getErrorType() { return errorType; }
+    public String getErrorMessage() { return errorMessage; }
+
+    // Сеттеры (методы для установки значений полей)
+    public void setId(int id) { this.id = id; }
+    // ... и так далее для всех полей, если они нужны для редактирования
+
+    // Метод для удобного вывода объекта
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Дата: " + date + ", Ветка: " + branch + ", Тип: " + errorType;
+    }
+}
+
+
+
+
+

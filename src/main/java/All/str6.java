@@ -1,3 +1,5 @@
+package All;
+
 public class str6 {
     public static void main(String[] args) {
         String one = "bla bla bla";
