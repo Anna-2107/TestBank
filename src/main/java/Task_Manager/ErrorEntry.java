@@ -12,17 +12,19 @@ public class ErrorEntry {
     private LocalDate date;
     private String branch;
     private String errorType;
+    private String name;
     private String platform;
     private String taskId;
     private final Map<String, String> extraFields = new HashMap<>();            // Новое поле для хранения дополнительных, неизвестных столбцов
 
 
     //Полный конструктор: Нужен для создания объекта из данных, прочитанных из файла.
-public ErrorEntry(String id, LocalDate date, String branch,String errorType, String platform, String taskId) {
+public ErrorEntry(String id, LocalDate date, String branch,String errorType,String name, String platform, String taskId) {
         this.id = id;
         this.date = date;
         this.branch = branch;
         this.errorType = errorType;
+        this.name = name;
         this.platform = platform;
         this.taskId = taskId;
 }
@@ -32,6 +34,7 @@ public String getId() {return  id;}
 public LocalDate getDate() {return date;}
 public String getBranch() {return branch;}
 public String getErrorType() {return errorType;}
+    public String getname() {return name;}
 public String getPlatform() {return platform;}
 public String getTaskId() {return taskId;}
     public Map<String, String> getExtraFields() {
@@ -51,6 +54,7 @@ public String toCsvString() {
             date.toString(),
             branch,
             errorType,
+            name,
             platform,
             taskId
         );

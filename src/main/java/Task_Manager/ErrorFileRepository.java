@@ -34,7 +34,7 @@ public List<ErrorEntry> loadAll (String filename) {
         String[] parts = line.split(CSV_DELIMITER);
 
 // Проверяем, что количество данных соответствует хотя бы минимально необходимому
-    if (parts.length < 6) {
+    if (parts.length < 7) {
         System.err.println("Ошибка: недостаточно полей в строке: " + line);
         continue;
     }
@@ -46,14 +46,15 @@ public List<ErrorEntry> loadAll (String filename) {
             LocalDate date = LocalDate.parse(parts[1]);
             String branch = parts[2];
             String errorType = parts[3];
-            String platform = parts[4];
-            String taskId = parts[5];
+            String name = parts[4];
+            String platform = parts[5];
+            String taskId = parts[6];
 
-            ErrorEntry entry = new ErrorEntry(id, date, branch, errorType, platform, taskId);
+            ErrorEntry entry = new ErrorEntry(id, date, branch, errorType, name, platform, taskId);
 
 // 3. Парсим ДОПОЛНИТЕЛЬНЫЕ ПОЛЯ (начиная с 6-го индекса)
-     if (parts.length > 6) {
-         for (int i = 6; i < parts.length; i++) {
+     if (parts.length > 7) {
+         for (int i = 7; i < parts.length; i++) {
              String headerName = headers[i];
              String value = parts[i];
              entry.getExtraFields().put(headerName, value);   //Map для хранения неструктурированных данных (в данном случае, extraFields).

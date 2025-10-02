@@ -1,0 +1,4 @@
+ID,Date,Branch,ErrorType,Name,Platform,TaskId,Severity,JiraLink
+1,2025-09-29,физ,TypeError,LoginFlow,Web,T-001,High,LINK-123
+2,2025-09-30,вип,DBError,Checkout,Mobile,T-002,,
+3,2025-10-01,мсб,AuthError,Payment,Web,T-003
